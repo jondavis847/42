@@ -155,7 +155,6 @@ ifeq ($(42PLATFORM),__MSYS__)
       ifneq ($(shell pacman -Qi mingw-w64-x86_64-freeglut >/dev/null 2>&1 && pacman -Qi mingw-w64-x86_64-glew >/dev/null 2>&1 && echo true),)
          LFLAGS =    
          GLINC = -I /mingw64/include/GL/         
-         $(info pacman)
       else
          GLEW = $(EXTERNDIR)GLEW/
          GLUT = $(EXTERNDIR)freeglut/
